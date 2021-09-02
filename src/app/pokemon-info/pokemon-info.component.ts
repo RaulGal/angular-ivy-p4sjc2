@@ -9,29 +9,15 @@ import { InfoPokedexService } from '../pokedexservice.service';
   styleUrls: ['./pokemon-info.component.css']
 })
 export class PokemonInfoComponent implements OnInit {
-  pokemon: InfoPokemonModel = {
-    name: '',
-    id: 0,
-    stats: '',
-    weight: ''
-  };
-
-  pokemon_id: any;
+  pokemon: any;
 
   constructor(
-    private route: ActivatedRoute,
+    private actRoute: ActivatedRoute,
     public infoPokedexService: InfoPokedexService
-  ) {}
-
-  ngOnInit(): void {
-    let _this = this;
-    _this.route.queryParams.subscribe(params => {
-      _this.pokemon.id = params.id;
-      _this.pokemon.name = params.name;
-      _this.pokemon.stats = params.stats;
-      _this.pokemon.weight = params.weight;
-
-      console.log('LOG DE LOS pokemons', _this.pokemon.id, _this.pokemon.name);
-    });
+  ) {
+    this.pokemon = this.actRoute.snapshot.params.id;
+    console.log(JSON.parse(this.pokemon));
   }
+
+  ngOnInit() {}
 }

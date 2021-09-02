@@ -18,8 +18,9 @@
       <div class="card-body">
         <h5 class="card-title"> <strong>{{datosPoke.id}}</strong> {{datosPoke.name}}</h5>
         <img src="{{datosPoke.image}}"class="img-fluid rounded-start" [alt]="datosPoke.name">
-        <a class="btn btn-primary" (click)="navigate(pokemon.id, pokemon.name, pokemon.stats, pokemon.weight)"
-          routerLink="/pokemon-info" routerLinkActive="active">+ info</a>
+
+
+        <button (click)="this.navigate(datosPoke)"class="btn btn-danger">INFO</button>
       </div>
     </div>
   </div>

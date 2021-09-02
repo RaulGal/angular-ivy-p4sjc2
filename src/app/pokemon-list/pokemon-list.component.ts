@@ -41,9 +41,7 @@ export class PokemonListComponent implements OnInit {
     });
   }
 
-  navigate(id: any, name: any, stats: any, weight: any) {
-    this.router.navigate(['/pokemon-info'], {
-      queryParams: { id: id, name: name, stats: stats, weight: weight }
-    });
+  navigate(data) {
+    this.router.navigate(['/pokemon-info', JSON.stringify(data)]);
   }
 }
