@@ -16,6 +16,7 @@ export class PokemonListComponent implements OnInit {
   pokemonName: any;
   pokemonId: any;
   arrayNuevo: any;
+
   constructor(
     public Pokedexservice: InfoPokedexService,
     private activatedRoute: ActivatedRoute,

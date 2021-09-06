@@ -10,6 +10,7 @@ import { InfoPokedexService } from '../pokedexservice.service';
 })
 export class PokemonInfoComponent implements OnInit {
   pokemon: any;
+  pokemonInf: any;
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -17,7 +18,16 @@ export class PokemonInfoComponent implements OnInit {
   ) {
     this.pokemon = this.actRoute.snapshot.params.id;
     console.log(JSON.parse(this.pokemon));
+    this.pokemonInf = JSON.parse(this.pokemon);
+    console.log ("log para ver si es un objeto", this.pokemonInf)
+
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+   
+
+  }
+
+
 }
