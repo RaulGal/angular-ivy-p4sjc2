@@ -45,19 +45,6 @@ export class PokemonListComponent implements OnInit {
       console.log('objeto arraynuevo', this.pokemon);
     });
 
-    this.Pokedexservice.getInfPokemon().subscribe(data => {
-      this.apinfo = data.results;
-
-      this.arrayNuevo2 = [];
-
-      for (let i = 0; i < this.pokemon.length; i++) {
-        this.arrayNuevo2[i] = {
-          idpokemon: this.apinfo[i].id,
-          weight: this.apinfo[i].weight
-        };
-        console.log('objeto arraynuevo2', this.apinfo);
-      }
-    });
   }
 
   navigate(data) {

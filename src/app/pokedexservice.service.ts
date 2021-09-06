@@ -14,10 +14,8 @@ export class InfoPokedexService {
     return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=500');
   }
 
-
   getInfPokemon(): Observable<any> {
-   let idpokemon;
-    return this.http.get('https://pokeapi.co/api/v2/pokemon/idpokemon/', idpokemon);
+    let idpokemon = 1;
+    return this.http.get('https://pokeapi.co/api/v2/pokemon/' + idpokemon);
   }
-
 }
