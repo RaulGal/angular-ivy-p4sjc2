@@ -16,6 +16,8 @@ export class PokemonListComponent implements OnInit {
   pokemonName: any;
   pokemonId: any;
   arrayNuevo: any;
+  apinfo: any;
+  arrayNuevo2: any;
 
   constructor(
     public Pokedexservice: InfoPokedexService,
@@ -36,8 +38,24 @@ export class PokemonListComponent implements OnInit {
           image:
             'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
             (i + 1) +
-            '.png'
+            '.png',
+          weight: this.pokemon[i].weight
         };
+      }
+      console.log('objeto arraynuevo', this.pokemon);
+    });
+
+    this.Pokedexservice.getInfPokemon().subscribe(data => {
+      this.apinfo = data.results;
+
+      this.arrayNuevo2 = [];
+
+      for (let i = 0; i < this.pokemon.length; i++) {
+        this.arrayNuevo2[i] = {
+          idpokemon: this.apinfo[i].id,
+          weight: this.apinfo[i].weight
+        };
+        console.log('objeto arraynuevo2', this.apinfo);
       }
     });
   }
