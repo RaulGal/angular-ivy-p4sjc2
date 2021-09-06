@@ -23,7 +23,6 @@ export class PokemonInfoComponent implements OnInit {
     this.pokemon = this.actRoute.snapshot.params.id;
     console.log(JSON.parse(this.pokemon));
     this.pokemonInf = JSON.parse(this.pokemon);
-    console.log('log para ver si es un objeto', this.pokemonInf);
   }
 
   ngOnInit() {
@@ -37,8 +36,8 @@ export class PokemonInfoComponent implements OnInit {
           idpokemon: i,
           weight: this.apinfo[i].weight
         };
-        console.log('objeto arraynuevo2', this.arrayNuevo2[i]);
       }
+      console.log('objeto arraynuevo2', this.apinfo);
     });
   }
 }
