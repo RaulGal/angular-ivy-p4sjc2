@@ -38,13 +38,11 @@ export class PokemonListComponent implements OnInit {
           image:
             'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
             (i + 1) +
-            '.png',
-          weight: this.pokemon[i].weight
+            '.png'
         };
       }
       console.log('objeto arraynuevo', this.pokemon);
     });
-
   }
 
   navigate(data) {
