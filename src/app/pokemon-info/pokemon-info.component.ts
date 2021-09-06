@@ -33,7 +33,7 @@ export class PokemonInfoComponent implements OnInit {
 
       for (let i = 0; i < this.apinfo.length; i++) {
         this.arrayNuevo2[i] = {
-          idpokemon: i,
+          idpokemon: i + 1,
           weight: this.apinfo[i].weight
         };
       }
