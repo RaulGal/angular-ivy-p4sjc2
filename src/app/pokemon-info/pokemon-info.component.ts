@@ -16,6 +16,7 @@ export class PokemonInfoComponent implements OnInit {
   idpokemon: any;
   idpoke:any;
   arrayNuevo:any;
+  id: any;
 
   constructor(
     private actRoute: ActivatedRoute,

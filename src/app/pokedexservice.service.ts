@@ -13,6 +13,7 @@ export class InfoPokedexService {
   pokemon: any;
   apinfo:any;
   arrayNuevo: any;
+  id: any;
   
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
@@ -20,8 +21,8 @@ export class InfoPokedexService {
     return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=500');
   }
 
-  getInfPokemon(): Observable<any> {
-    this.idpoke
+  getInfPokemon(idpoke): Observable<any> {
+ 
     return this.http.get('https://pokeapi.co/api/v2/pokemon/' + this.idpoke);
     
   }
