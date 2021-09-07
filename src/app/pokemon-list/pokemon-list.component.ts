@@ -41,8 +41,8 @@ export class PokemonListComponent implements OnInit {
             (i + 1) +
             '.png'
         };
-        this.arrayNuevo[i].id = this.idpoke;
-        console.log('sss', this.idpoke);
+      //this.arrayNuevo[i].id = this.idpoke;
+    
       }
     });
   }

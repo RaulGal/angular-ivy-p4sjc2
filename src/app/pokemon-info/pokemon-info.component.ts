@@ -13,10 +13,9 @@ export class PokemonInfoComponent implements OnInit {
   arrayNuevo2: any;
   pokemon: any;
   pokemonInf: any;
-  idpokemon: any;
   idpoke:any;
-  arrayNuevo:any;
-  id: any;
+ 
+
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -25,8 +24,10 @@ export class PokemonInfoComponent implements OnInit {
     private router: Router
   ) {
     this.pokemon = this.actRoute.snapshot.params.id;
-    console.log(JSON.parse(this.pokemon));
+    console.log("ss", JSON.parse(this.pokemon));
     this.pokemonInf = JSON.parse(this.pokemon);
+    this.idpoke = this.pokemonInf.id
+    console.log("dd",this.idpoke)
   }
 
   ngOnInit() {
@@ -46,7 +47,7 @@ export class PokemonInfoComponent implements OnInit {
         };
         
       }
-      //console.log("get", this.apinfo)
+      console.log("get", this.apinfo)
     }
     )
     
