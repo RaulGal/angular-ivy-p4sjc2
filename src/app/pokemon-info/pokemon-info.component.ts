@@ -47,7 +47,7 @@ export class PokemonInfoComponent implements OnInit {
         };
         
       }
-      console.log("get", this.apinfo)
+      console.log("get", this.apinfo.weight)
     }
     )
     

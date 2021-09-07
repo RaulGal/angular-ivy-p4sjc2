@@ -9,12 +9,21 @@
   <br>
   <li><strong>Tipo:</strong> </li>
   <br>
-  <li><strong>Peso:</strong>{{pokemonInf.weight}} </li>
+
   <br>
   
 
-</ul>
 
+
+<div class="card" *ngFor="let infoPoke of arrayNuevo2">
+
+<div class="card-title"> <strong>Peso:</strong>{{infoPoke.weight}</div>
+
+
+</div>
 
 
 <img src="{{pokemonInf.image}}"class="img-fluid rounded-start" [alt]="pokemonInf.name">
+
+
+</ul>
