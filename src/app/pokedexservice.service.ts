@@ -8,6 +8,12 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   providedIn: 'root'
 })
 export class InfoPokedexService {
+
+  idpoke:any;
+  pokemon: any;
+  apinfo:any;
+  arrayNuevo: any;
+  
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
   getAllPokemon(): Observable<any> {
@@ -15,7 +21,10 @@ export class InfoPokedexService {
   }
 
   getInfPokemon(): Observable<any> {
-    let idpokemon = 1;
-    return this.http.get('https://pokeapi.co/api/v2/pokemon/' + idpokemon);
+    this.idpoke
+    return this.http.get('https://pokeapi.co/api/v2/pokemon/' + this.idpoke);
+    
   }
+  
 }
+

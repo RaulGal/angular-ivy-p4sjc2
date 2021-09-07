@@ -13,6 +13,9 @@ export class PokemonInfoComponent implements OnInit {
   arrayNuevo2: any;
   pokemon: any;
   pokemonInf: any;
+  idpokemon: any;
+  idpoke:any;
+  arrayNuevo:any;
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -27,7 +30,11 @@ export class PokemonInfoComponent implements OnInit {
 
   ngOnInit() {
     this.Pokedexservice.getInfPokemon().subscribe(data => {
-      this.apinfo = data.results;
+     
+      this.apinfo = data;
+     
+      
+      
 
       this.arrayNuevo2 = [];
 
@@ -36,8 +43,14 @@ export class PokemonInfoComponent implements OnInit {
           idpokemon: i + 1,
           weight: this.apinfo[i].weight
         };
+        
       }
-      console.log('objeto arraynuevo2', this.apinfo);
-    });
+      //console.log("get", this.apinfo)
+    }
+    )
+    
+    ;
+
+    
   }
 }
