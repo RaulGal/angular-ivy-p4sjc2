@@ -30,7 +30,7 @@ export class PokemonInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.Pokedexservice.getInfPokemon().subscribe(data => {
+    this.Pokedexservice.getInfPokemon(this.idpoke).subscribe(data => {
      
       this.apinfo = data;
      
