@@ -32,7 +32,9 @@ export class PokemonInfoComponent implements OnInit {
     this.Pokedexservice.getInfPokemon(this.idpoke).subscribe(data => {
       this.apinfo = data;
 
-      console.log('get', this.apinfo.weight);
+      //console.log('get', this.apinfo);
+
+      //Habria que crear un IF para cuando el Pokemon tenga DOBLE TIPO
     });
   }
 }
