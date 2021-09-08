@@ -32,7 +32,7 @@ export class PokemonInfoComponent implements OnInit {
     this.Pokedexservice.getInfPokemon(this.idpoke).subscribe(data => {
       this.apinfo = data;
 
-      console.log('get', this.apinfo);
+      console.log('get', this.apinfo.weight);
     });
   }
 }

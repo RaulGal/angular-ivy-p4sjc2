@@ -10,6 +10,14 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
+    
+  }
+
+
+  searchPokemon(term: string) {
+    console.log(term);
   }
 
 }
