@@ -7,23 +7,11 @@
   <li><strong>Numero de Pokemon:</strong> {{pokemonInf.id}}</li>
 
   <br>
-  <li><strong>Tipo:</strong> </li>
+  <li><strong>Tipo:</strong> {{apinfo.types[0].type.name}}</li>
   <br>
-
-  <br>
-  
-
-
-
-<div class="card" *ngFor="let infoPoke of arrayNuevo2">
-
-<div class="card-title"> <strong>Peso:</strong>{{infoPoke.weight}</div>
-
-
-</div>
-
-
-<img src="{{pokemonInf.image}}"class="img-fluid rounded-start" [alt]="pokemonInf.name">
+  <li><strong>Peso: </strong>{{apinfo.weight}}kg</li>
+  <br><br>
+  <img src="{{apinfo.sprites.other.dream_world.front_default}}"class="img-fluid rounded-start" [alt]="pokemonInf.name">
 
 
 </ul>

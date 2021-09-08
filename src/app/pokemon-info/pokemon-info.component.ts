@@ -13,9 +13,7 @@ export class PokemonInfoComponent implements OnInit {
   arrayNuevo2: any;
   pokemon: any;
   pokemonInf: any;
-  idpoke:any;
- 
-
+  idpoke: any;
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -24,35 +22,17 @@ export class PokemonInfoComponent implements OnInit {
     private router: Router
   ) {
     this.pokemon = this.actRoute.snapshot.params.id;
-    console.log("ss", JSON.parse(this.pokemon));
+    console.log('ss', JSON.parse(this.pokemon));
     this.pokemonInf = JSON.parse(this.pokemon);
-    this.idpoke = this.pokemonInf.id
-    console.log("dd",this.idpoke)
+    this.idpoke = this.pokemonInf.id;
+    console.log('dd', this.idpoke);
   }
 
   ngOnInit() {
     this.Pokedexservice.getInfPokemon(this.idpoke).subscribe(data => {
-     
       this.apinfo = data;
-     
-      
-      
 
-      this.arrayNuevo2 = [];
-
-      for (let i = 0; i < this.apinfo.length; i++) {
-        this.arrayNuevo2[i] = {
-          idpokemon: i + 1,
-          weight: this.apinfo[i].weight
-        };
-        
-      }
-      console.log("get", this.apinfo.weight)
-    }
-    )
-    
-    ;
-
-    
+      console.log('get', this.apinfo);
+    });
   }
 }
