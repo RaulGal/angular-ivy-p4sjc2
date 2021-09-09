@@ -50,4 +50,13 @@ export class PokemonListComponent implements OnInit {
   navigate(data) {
     this.router.navigate(['/pokemon-info', JSON.stringify(data)]);
   }
+
+  searchPokemon(name: string){
+
+  
+  return this.arrayNuevo.filter(this.arrayNuevo.name);
+
+  
+}
+
 }

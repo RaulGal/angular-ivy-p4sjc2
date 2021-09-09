@@ -16,8 +16,8 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  searchPokemon(term: string) {
-    console.log(term);
+  searchPokemon(name: string) {
+    console.log("busqueda",name);
   }
 
 }
