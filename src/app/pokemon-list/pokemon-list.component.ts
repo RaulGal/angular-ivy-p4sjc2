@@ -41,8 +41,7 @@ export class PokemonListComponent implements OnInit {
             (i + 1) +
             '.png'
         };
-      //this.arrayNuevo[i].id = this.idpoke;
-    
+        //this.arrayNuevo[i].id = this.idpoke;
       }
     });
   }
@@ -50,13 +49,11 @@ export class PokemonListComponent implements OnInit {
   navigate(data) {
     this.router.navigate(['/pokemon-info', JSON.stringify(data)]);
   }
+  searchPokemon(name: string) {
+    console.log("busqueda",name)
+    return this.arrayNuevo.filter(this.arrayNuevo.name);
 
-  searchPokemon(name: string){
-
-  
-  return this.arrayNuevo.filter(this.arrayNuevo.name);
-
-  
-}
+ 
+  }
 
 }
